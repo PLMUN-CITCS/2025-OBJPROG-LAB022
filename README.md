@@ -143,7 +143,7 @@ Only perform this if this is the first time you will setup your Git Environment
       - In the same file (CarDemo.java), outside the Car class, create the main method. This is where your program will start running.
       ```Java
       public class CarDemo {
-          public static void main(String args) {
+          public static void main(String[] args) {
               // Code will go here
           }
       }
