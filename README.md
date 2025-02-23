@@ -1,7 +1,7 @@
-# **2025-OBJPROG-LAB016**
+# **2025-OBJPROG-LAB022**
 Week 05 - Methods in Java
 
-Laboratory # 16 - Guided Coding Exercise 5: Method Overloading
+Laboratory # 22 - Week 05 - Guided Coding Exercise 1: Basic Class Creation and Object Instantiation
 
 ## **Instructions**
 
@@ -77,102 +77,108 @@ Only perform this if this is the first time you will setup your Git Environment
 
 ### **Step 3: Complete the Assignment**
 
-**Laboratory # 16 - Guided Coding Exercise 5: Method Overloading**
+**Laboratory # 22 - Week 05 - Guided Coding Exercise 1: Basic Class Creation and Object Instantiation**
 
    **Objective:**
-   - Define and use method overloading to write cleaner and more modular code.
-   - Understand that methods with the same name can coexist if they have different parameter lists.
+   - Discuss the concepts of objects and classes.
+   - Create a simple class with attributes and methods, and instantiate an object.
 
    **File Naming Convention:**
-   - `MethodOverloading.java`
+   - `CarDemo.java`
 
    **Desired Output:**
    ```txt
-   Integer value: 10
-   Double value: 3.14
-   String value: Hello!
+   //Modify this
    ```
 
-   **Notable Observations (to be discussed after completing the exercise):**
-   - You have defined three methods with the same name (printValue) but with different parameter lists. This is method overloading.
-   - The Java compiler determines which method to call based on the type of the argument you provide.
+   **Notable Observations:**
+   - The Car class acts as a blueprint for creating Car objects.
+   - The myCar object is an instance of the Car class.
+   - The displayInfo method defines the behavior of the Car object.
 
    **Java Programming Best Practices:**
-   - Use method overloading when you have methods that perform similar tasks but operate on different data types or a different number of inputs.
-   - Ensure that the overloaded methods have distinct parameter lists so the compiler can differentiate between them.
+   - Use meaningful class and variable names that clearly describe their purpose.
+   - Use comments to explain your code and the purpose of classes and methods.
+   - Follow Java naming conventions (e.g., class names start with an uppercase letter).
       
    **Step-by-Step Instructions:**
 
-   1. Setup Class and Main Method
-      - Create a file named `MethodOverloading.java`.
-      - Define the class `MethodOverloading` and the `main` method.
+   1. Create the Car Class
+      - Create a new Java file named `CarDemo.java`.
+      - Define a class called `Car`.
       ```Java      
-      public class MethodOverloading {
-          public static void main(String[] args) {
-      
-          }
+      class Car {
+          // Code will go here
       }
       ```
             
-   2. Create the First printValue Method
-      - After the closing brace of main, type public static void printValue(int number) {}
-      - Inside this method, add: System.out.println("Integer value: " + number);
+   2. Add Attributes (Data Fields)
+      - Inside the Car class, declare three instance variables (attributes):
+         - make of type String
+         - model of type String
+         - year of type int
       ```Java
-      public class MethodOverloading {
-          //... (main method)...
-          public static void printValue(int number) {
-              System.out.println("Integer value: " + number);
+      class Car {
+          String make;
+          String model;
+          int year;
+      }
+      ```
+
+   3. Add a displayInfo Method
+      - Inside the Car class, create a method named displayInfo.
+      - This method should not return any value (void).
+      - Inside the displayInfo method, add a println statement to print the car's information in the format: "Car: [year] [make] [model]"
+      ```Java
+      class Car {
+          //... (attributes)...
+      
+          public void displayInfo() {
+              System.out.println("Car: " + year + " " + make + " " + model);
           }
       }
       ```
 
-   3. Create the Second printValue Method
-      - After the first printValue method, type public static void printValue(double number) {}
-      - Inside this method, add: System.out.println("Double value: " + number);
+   4. Create the main Method
+      - In the same file (CarDemo.java), outside the Car class, create the main method. This is where your program will start running.
       ```Java
-      public class MethodOverloading {
-          //... (main and first printValue methods)...
-          public static void printValue(double number) {
-              System.out.println("Double value: " + number);
-          }
-      }
-      ```
-
-   4. Create the Third printValue Method
-      - After the second printValue method, type public static void printValue(String text) {}
-      - Inside this method, add: System.out.println("String value: " + text);
-      ```Java
-      public class MethodOverloading {
-          //... (main and other printValue methods)...
-          public static void printValue(String text) {
-              System.out.println("String value: " + text);
-          }
-      }
-      ```
-
-   5. Call the printValue Methods
-      - In main, add these lines:
-         - printValue(10);
-         - printValue(3.14);
-         - printValue("Hello!");
-      ```Java
-      public class MethodOverloading {
+      public class CarDemo {
           public static void main(String args) {
-              printValue(10);
-              printValue(3.14);
-              printValue("Hello!");
+              // Code will go here
           }
-          //... (printValue methods)...
       }
       ```
 
-   6. Compile and Run
-       - Save the file as `MethodOverloading.java`.
-       - Compile the code using `javac MethodOverloading.java` in your terminal or command prompt.
-       - Run the compiled code using `java MethodOverloading`.
+   5. Create a Car Object
+      - Inside the main method, create an object of the Car class named myCar. Use the new keyword to instantiate the object.
+      ```Java
+      Car myCar = new Car();
+      ```
+
+   6. Assign Values to Attributes
+      - In the main method, assign values to the attributes of the myCar object:
+         - Set the make to "Toyota".
+         - Set the model to "Corolla".
+         - Set the year to 2020.
+      ```Java
+      myCar.make = "Toyota";
+      myCar.model = "Corolla";
+      myCar.year = 2020;
+      ```
+
+   7. Call the displayInfo Method
+      - In the main method, call the displayInfo() method on the myCar object.
+      ```Java
+      myCar.displayInfo();
+      ```
+
+   8. Compile and Run
+       - Save the file as `CarDemo.java`.
+       - Compile the code using `javac CarDemo.java` in your terminal or command prompt.
+       - Run the compiled code using `java CarDemo`.
 
    **Conclusion**
-   This exercise demonstrated the concept of method overloading in Java. Method overloading allows you to create multiple methods with the same name, as long as they have different parameter lists. This can make your code more concise, readable, and organized, especially when dealing with similar operations on different data types.
+   This exercise introduced the fundamental concepts of classes and objects in Java. Classes are blueprints for creating objects, and objects are instances of classes. Classes define the attributes and behaviors of objects. By understanding these concepts, you can start building more complex and organized Java programs that model real-world entities and their interactions.
 
 ### **Step 4: Push Changes to GitHub**
 Once you've completed your changes, follow these steps to upload your work to your GitHub repository.
@@ -196,7 +202,7 @@ Once you've completed your changes, follow these steps to upload your work to yo
    Write a meaningful commit message:
    
    ```bash
-   git commit -m "Submitting OBJPROG Week 05 - Laboratory # 16"
+   git commit -m "Submitting OBJPROG Week 05 - Laboratory # 22"
    ```
    
 4. Push your changes to GitHub:
