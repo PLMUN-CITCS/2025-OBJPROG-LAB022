@@ -88,7 +88,7 @@ Only perform this if this is the first time you will setup your Git Environment
 
    **Desired Output:**
    ```txt
-   //Modify this
+   Car: 2020 Toyota Corolla
    ```
 
    **Notable Observations:**
